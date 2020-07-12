@@ -48,12 +48,12 @@ img {
   margin: 0;
 }
 /* работа ссылок */
-a.link {
+.link {
   text-decoration: none;
   display: block;
 }
-a.link:hover,
-a.link:focus {
+.page .link:hover,
+.page .link:focus {
   color: var(--accent-color);
 }
 /* утилиты! */
@@ -64,7 +64,6 @@ a.link:focus {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
 }
 .logo .item {
   color: var(--title-text-color);
@@ -111,7 +110,7 @@ a.link:focus {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--primary-text-color);
+  background: rgba(47, 48, 58, 0.8);
   text-align: center;
 }
 .hero-title {
@@ -382,6 +381,10 @@ a.link:focus {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+.radio-button:hover,
+.radio-button:focus {
+  background-color: var(--accent-color);
 }
 .projects {
   display: flex;
