@@ -182,29 +182,21 @@ img {
   padding-top: 94px;
   padding-bottom: 47px;
 }
-.advantages .item::before {
+.box-icon {
   margin-bottom: 30px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
   border-radius: 4px;
-  content: "";
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   background-color: var(--team-bg-color);
 }
-.icon-antenna::before {
-  background-image: url(../image/antenna.svg);
+.box-icon__svg {
+  width: 70px;
+  height: 70px;
 }
-.icon-clock::before {
-  background-image: url(../image/clock.svg);
-}
-.icon-diagram::before {
-  background-image: url(../image/diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../image/astronaut.svg);
-}
+
 .advantages {
   display: flex;
 }
@@ -294,17 +286,28 @@ img {
   background-color: var(--team-bg-color);
 }
 /* стилизация соц-сетей */
-.team .social-networks {
+.social-networks {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-left: 32px;
   padding-right: 32px;
 }
-.team .social-networks .item-networks {
-  width: calc((100%-30px) / 4);
+.social-networks__link {
+  height: 44px;
+  width: 44px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-networks__link:hover {
+  background-color: var(--accent-color);
+}
+.social-networks .imet {
   margin-right: 10px;
 }
-.team .social-networks .item-networks:nth-child(4n) {
+.social-networks .imet:nth-child(4n) {
   margin-right: 0;
 }
 .section-team,
@@ -334,7 +337,17 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
 }
-
+.icon-logo {
+  fill: #afb1b8;
+}
+.customers .link:hover,
+.customers .link:focus {
+  border-color: var(--accent-color);
+}
+.customers .link:hover .icon-logo,
+.customers .link:focus .icon-logo {
+  fill: var(--accent-color);
+}
 /* подвал страницы */
 .footer {
   background-color: var(--footer-bg-color);
@@ -394,31 +407,13 @@ img {
 .social-networks .item:nth-child(4n) {
   margin-right: 0;
 }
-.social-networks .item .link::before {
+.social-networks .item .link {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  display: block;
-  content: "";
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
-.social-networks .item .link:hover::before {
-  background-color: var(--accent-color);
-}
-.icon-instagram .link::before {
-  background-image: url(../image/networks-footer/instagram2.svg);
-}
-.icon-twitter .link::before {
-  background-image: url(../image/networks-footer/twitter1.svg);
-}
-.icon-facebook .link::before {
-  background-image: url(../image/networks-footer/facebook1.svg);
-}
-.icon-linkedin .link::before {
-  background-image: url(../image/networks-footer/linkedin1.svg);
-}
+
 /* страница портфолио */
 .title-portfolio {
   display: none;
